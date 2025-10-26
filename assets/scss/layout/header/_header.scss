@@ -1,0 +1,204 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  3.1 Header Style 1
+/*----------------------------------------*/
+
+
+.#{$theme-prefix}-header{
+    &-1{
+        &-ptb{
+            @media #{$lg,$md,$xs} {
+            padding: 10px 0;
+            }
+        }
+    }
+    &-logo{
+        flex: 0 0 auto;
+        & img{
+            @media #{$xl} {
+                width: 100%;
+            }
+            @media #{$md,$sm,$xs} {
+                max-width: 100%;
+            }
+        }
+        & .black{
+          display: none;
+        }
+        &.scrolled{
+          & .black{
+            display: block;
+          }
+          & .white{
+            display: none;
+          }
+        }
+    }
+    &-transparent{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        z-index: 3;
+    }
+    &-border{
+        border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    }
+    &-box{
+        width: 100%;
+        padding-left: 66px;
+    }
+    &-main-right{
+        line-height: 1;
+        &-btn{
+            margin-left: 30px;
+            & .tp-btn{
+                padding: 12px 25px 12px;
+            }
+        }
+    }
+    &-search{
+        &-input {
+            position: relative;
+            &.active {
+               &::before {
+                  width: 100%;
+                  transition-delay: 0.3s;
+               }
+               & input {
+                  width: 175px;
+                  @media #{$xl} {
+                     width: 100px;
+                  }
+               }
+            }
+            & input {
+               padding: 0px 28px;
+               padding-right: 0;
+               height: 40px;
+               width: 80px;
+               border: 0;
+               font-size: 14px;
+               font-weight: 400;
+               letter-spacing: -0.02em;
+               background-color: transparent;
+               color: var(--tp-common-white);
+               
+               &::placeholder {
+                   font-size: 14px;
+                   font-weight: 400;
+                   letter-spacing: -0.02em;
+                   color: rgba($color: #ffff, $alpha: 0.6);
+               }
+            }
+
+            &::before {
+               content: "";
+               position: absolute;
+               bottom: 0;
+               left: 0;
+               width: 0;
+               height: 1px;
+               transition-delay: 0s;
+               transition: width 0.3s ease;
+               background-color: var(--tp-theme-secondary);
+            }
+        }
+        &-icon {
+            position: absolute;
+            left: 0;
+            top: 48%;
+            transform: translateY(-50%);
+            & span {
+               color: var(--tp-common-white);
+            }
+        }
+    }
+    &-sticky-cloned {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 98;
+        visibility: hidden;
+        transform: translateY(-100%);
+        transition: transform 500ms ease, visibility 500ms ease;
+        &.tp-header-pinned {
+            transform: translateY(0%);
+            visibility: visible;
+            backdrop-filter: blur(14px);
+            background-color: rgba(255, 255, 255, 0.7);
+            box-shadow: 0px 4px 10px rgba(3, 4, 28, 0.1);
+            @media #{$lg,$md,$xs} {
+                padding: 15px 0;
+            }
+        }
+    }
+    &-onepage {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 10;
+        transition: .3s ease;
+        background: var(--tp-common-white);
+        box-shadow: 0px 4px 10px rgba(3, 4, 28, 0.1);
+        animation: .95s ease 0s normal forwards 1 running headerSlideDown;
+    }
+    &-sticky-onepage{
+        display: none;
+        &.tp-header-onepage{
+            display: inline-block;
+        }
+    }
+    &-hamburger{
+        margin-left: 20px;
+    }
+}
+
+
+.tp-header-sticky-cloned.tp-header-pinned {
+    &.tp-header{
+        &-1-ptb,
+        &-3-ptb{
+            backdrop-filter: blur(14px);
+            background-color: rgba($color: #1f2220, $alpha: 0.9);
+            & #tp-header-search{
+                & .tp-header-search{
+                    &-input{
+                        & input{
+                            color: var(--tp-common-white);
+                            &::placeholder{
+                                color: var(--tp-common-white);
+                            }
+                        }
+                    }
+                    &-icon{
+                        & span{
+                            color: var(--tp-common-white);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & #tp-header-search-2{
+        & .tp-header-search{
+            &-input{
+                & input{
+                    color: var(--tp-heading-primary);
+                    &::placeholder{
+                        color: var(--tp-heading-primary);
+                    }
+                }
+            }
+            &-icon{
+                & span{
+                    color: var(--tp-heading-primary);
+                }
+            }
+        }
+    }
+}

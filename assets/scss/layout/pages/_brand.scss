@@ -1,0 +1,130 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.3 Brand Css
+/*----------------------------------------*/
+
+.#{$theme-prefix}-brand{
+   &-item{
+      & img{
+         opacity: 0.4;
+         @include transition();
+      }
+      &:hover{
+         & img{
+            opacity: 1;
+         }
+      }
+   }
+   &-slide-wrap{
+      position: relative;
+      &::before{
+         position: absolute;
+         content: '';
+         top: 0;
+         left: 0;
+         height: 100%;
+         width: 35%;
+         z-index: 2;
+         background-color: var(--tp-common-white);
+         @media #{$md,$xs} {
+            content: none;
+         }
+      }
+   }
+   &-breadcrumb{
+      &-ptb{
+         @media #{$md,$xs} {
+            padding-top: 50px;
+         }
+      }
+   }
+}
+
+
+
+.#{$theme-prefix}-company-3{
+   &-ptb{
+      height: 960px;
+     @media #{$md,$xs} {
+      height: 600px;
+     }
+   }
+   &-bg{
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: calc(52% - 20px);
+      border-radius: 0 10px 10px 0;
+      background-repeat: no-repeat;
+      @media #{$xxl,$xl,$lg} {
+         width: 60%;
+      }
+      @media #{$md,$xs} {
+         display: none;
+      }
+   }
+   &-content{
+      position: absolute;
+      top: 155px;
+      right: 0;
+      height: 81%;
+      z-index: 2;
+      padding-top: 160px;
+      padding-left: 100px;
+      padding-right: 350px;
+      width: calc(52% - 0px);
+      border-radius: 10px 0px 0px 10px;
+      background-color: var(--tp-heading-primary);
+      @media #{$xxl,$xl} {
+         height: 77%;
+         padding-top: 110px;
+         padding-left: 80px;
+         padding-right: 140px;
+      }
+      @media #{$lg} {
+         height: 70%;
+         padding-top: 110px;
+         padding-left: 30px;
+         padding-right: 30px;
+      }
+      @media #{$md} {
+         position: static;
+         width: 100%;
+         height: 100%;
+         padding-top: 115px;
+         padding-left: 50px;
+         padding-right: 100px;
+      }
+      @media #{$xs} {
+         position: static;
+         width: 100%;
+         height: 100%;
+         padding-top: 80px;
+         padding-left: 30px;
+         padding-right: 50px;
+      }
+      & .tp-section-title{
+         color: var(--tp-common-white);
+      }
+      & .tp-about-progress-title{
+         color: var(--tp-common-white);
+      }
+      & .tp-about-progress {
+         & .progress-bar {
+            & span{
+               color: var(--tp-common-white);
+               background-color: var(--tp-heading-primary);
+            }
+         }
+      }
+      & p{
+         & br{
+            @media #{$xl} {
+               display: none;
+            }
+         }
+      }
+   }
+}

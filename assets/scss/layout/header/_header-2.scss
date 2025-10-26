@@ -1,0 +1,214 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  3.2 Header Style 2
+/*----------------------------------------*/
+
+
+.#{$theme-prefix}-header{
+    &-2{
+        &-top {
+            padding: 5px 0px;
+            background-color: var(--tp-heading-primary);
+        }
+        &-right {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        }
+        &-date{
+        & span{
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1;
+            color: var(--tp-common-white);
+            & svg{
+                display: inline-block;
+                margin-right: 8px;
+                transform: translateY(-1px);
+            }
+        }
+        }         
+        &-social {
+        padding-left: 22px;
+        margin-left: 22px;
+        border-left: 1px solid var(--tp-theme-primary);
+        & a {
+            font-size: 16px;
+            color: rgba($color: #ffff, $alpha: 0.35);
+            &:not(:last-child) {
+                margin-right: 12px;
+            }
+            &:hover {
+                color: var(--tp-common-white);
+                & svg {
+                    fill: var(--tp-common-white);
+                }
+            }
+            & svg {
+                width: 16px;
+                fill: currentColor;
+                transform: translateY(-2px);
+                @include transition();
+                }
+            }
+        }
+        &-menu{
+            & .tp-main-menu{
+                & ul {
+                    & li {
+                        & > a{
+                            padding: 31px 0;
+                            color: var(--tp-heading-primary);
+                        }
+                        &.has-dropdown {
+                            & > a{
+                                &::after{
+                                    color: var(--tp-heading-primary);
+                                }
+                            }
+                            &:hover{
+                                & > a{
+                                    &::after{
+                                        color: var(--tp-theme-secondary);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-right-search {
+            & .tp-header-search{
+                &-input{
+                    &::before{
+                        background-color: var(--tp-theme-primary);
+                    }
+                    & input{
+                        color: var(--tp-heading-primary);
+                        &::placeholder{
+                            color: var(--tp-text-body);
+                        }
+                    }
+                }
+                &-icon{
+                    & span{
+                        color: var(--tp-heading-primary);
+                    }
+                }
+            }
+        }
+        &-main{
+            @media #{$lg,$md,$xs} {
+                padding: 15px 0;
+            }
+            &-right-btn{
+                margin-left: 30px;
+                & .tp-btn{
+                    padding: 16px 26px 14px;
+                    & span{
+                        margin-right: 8px;
+                        display: inline-block;
+                        transform: translateY(-2px);
+                    }
+                    &:hover{
+                        color: var(--tp-common-white);
+                    }
+                }
+            }
+        }
+        &-hamburger{
+            margin-left: 20px;
+            & button{
+                background-color: var(--tp-theme-primary);
+                & span{
+                    background: var(--tp-common-white);
+                }
+            }
+        }
+    }
+    &-lang {
+        padding: 4px 28px;
+        padding-right: 0;
+        position: relative;
+        z-index: 99;
+        display: inline-block;
+        &-selected {
+            font-size: 14px;
+            font-weight: 400;
+            position: relative;
+            padding-right: 15px;
+            cursor: pointer;
+            color: var(--tp-common-white);
+            background-color: transparent;
+            & i{
+                margin-right: 5px;
+            }
+           &::after {
+              position: absolute;
+              content: "\f107";
+              right: 0;
+              top: 50%;
+              -webkit-transform: translateY(-50%);
+              -moz-transform: translateY(-50%);
+              -ms-transform: translateY(-50%);
+              -o-transform: translateY(-50%);
+              transform: translateY(-50%);
+              color: var(--tp-common-white);
+              font-size: 14px;
+              font-family: var(--tp-ff-fontawesome);
+           }
+        }
+  
+        &-list {
+           position: absolute;
+           top: 120%;
+           right: 0;
+           z-index: 11;
+           border-radius: 6px;
+           padding: 15px 15px;
+           min-width: 100px;
+           visibility: hidden;
+           opacity: 0;
+           background-color: var(--tp-common-white);
+  
+           & li {
+               text-align: left;
+               list-style: none;
+               font-weight: 400;
+               font-size: 14px;
+               color: var(--tp-common-black);
+               & a{
+                &:hover{
+                    color: var(--tp-theme-secondary)
+                }
+               }
+           }
+  
+           @include transition();
+  
+           &.tp-lang-list-open {
+              visibility: visible;
+              opacity: 1;
+              top: 100%;
+           }
+        }
+    }
+}
+
+
+.tp-header-pinned {
+    & .tp-header{
+        &-2-main{
+            & .tp-main-menu {
+                & nav{
+                    & > ul {
+                        & > li {
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

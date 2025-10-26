@@ -1,0 +1,5 @@
+//Office sass//
+sass --watch D:\pranta-dropbox\Dropbox\pranto\HTML\solub\assets\scss\main.scss:D:\pranta-dropbox\Dropbox\pranto\HTML\solub\assets\css\main.css
+
+//Home sass//
+sass --watch '/home/mdpranta/Dropbox/pranto/HTML/solub/assets/scss/main.scss':'/home/mdpranta/Dropbox/pranto/HTML/solub/assets/css/main.css'

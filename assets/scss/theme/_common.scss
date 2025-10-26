@@ -1,0 +1,301 @@
+@use '../utils' as *;
+/*---------------------------------
+    1.2 Common Classes
+---------------------------------*/
+
+.w-img{
+	& img{
+		width: 100%;
+	}
+}
+
+.m-img{
+	& img{
+		max-width: 100%;
+	}
+}
+
+.fix {
+    overflow:hidden
+}
+.clear{
+    clear: both;
+}
+
+.z-index-1{
+	z-index: 1;
+}
+
+.z-index-3{
+	z-index: 3;
+}
+
+.z-index-11{
+	z-index: 11;
+}
+
+.overflow-y-visible{
+	overflow-x: hidden;
+	overflow-y: visible;
+}
+
+.p-relative{
+	position: relative;
+}
+.p-absolute{
+	position: absolute;
+}
+
+.include-bg{
+	@include background();
+}
+
+.grid__item-img {
+	display: block;
+	height: 500px;
+	width: 500px;
+}
+
+@media (min-width: 1400px){
+	.container-large{
+		max-width: 1710px;
+	}
+}
+
+@media (min-width: 1400px){
+	.container-custom{
+		max-width: 1545px;
+	}
+}
+
+@media (min-width: 1400px){
+	.container-1600{
+		max-width: 1600px;
+	}
+}
+
+@media (min-width: 1400px){
+	.container-1500{
+		max-width: 1500px;
+	}
+}
+
+@media (min-width: 1400px){
+	.container-1320{
+		max-width: 1350px;
+	}
+}
+
+// demo for method
+.demo{
+	@include transition(color, .3s, linear);	
+
+	@include transition-mul((color .3s linear, transform .2s ease));	
+
+	@include rtl{
+		margin-left: 0;
+		margin-right: 15px;
+	}
+	@include root('div'){
+		img{
+			margin-left: 10px;
+		}
+	}
+}
+
+.position-middle {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+
+// video btn effect
+.video-animation {
+  position: relative;
+	z-index: 2;
+  &::after {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    width: 90%;
+    height: 90%;
+		z-index: -1;
+    transform: scale(1);
+    border: 1px solid var(--tp-common-white);
+    animation: video-border 1.5s linear infinite;
+    border-radius: 50%;
+  }
+}
+
+
+// for svg
+// on hover stroke animation
+// not checked
+.class{
+	stroke-dasharray: 189px, 191px;
+	stroke-dashoffset: 0px;
+}
+
+
+/* gutter for x axis */
+.tp-gx-10{
+	--bs-gutter-x: 10px;
+
+	@media #{$lg}{
+		--bs-gutter-x: 10px;
+	}
+
+	@media #{$md}{
+		--bs-gutter-x: 10px;
+	}
+
+	@media #{$sm}{
+		--bs-gutter-x: 5px;
+	}
+
+	@media #{$xs}{
+		--bs-gutter-x: 5px;
+	}
+
+	& [class*="col-"]{
+		padding-right: calc(var(--bs-gutter-x) * .5);
+		padding-left: calc(var(--bs-gutter-x) * .5);
+		margin-top: var(--bs-gutter-y);
+	}
+}
+
+.tp-gx-20{
+	--bs-gutter-x: 20px;
+
+	@media #{$lg}{
+		--bs-gutter-x: 20px;
+	}
+
+	@media #{$md}{
+		--bs-gutter-x: 20px;
+	}
+
+	@media #{$sm}{
+		--bs-gutter-x: 15px;
+	}
+
+	@media #{$xs}{
+		--bs-gutter-x: 10px;
+	}
+
+	& [class*="col-"]{
+		padding-right: calc(var(--bs-gutter-x) * .5);
+		padding-left: calc(var(--bs-gutter-x) * .5);
+		margin-top: var(--bs-gutter-y);
+	}
+}
+
+/* gutter for x axis */
+.tp-gx-30{
+	--bs-gutter-x: 30px;
+
+	@media #{$lg}{
+		--bs-gutter-x: 30px;
+	}
+
+	@media #{$md}{
+		--bs-gutter-x: 30px;
+	}
+
+	@media #{$sm}{
+		--bs-gutter-x: 15px;
+	}
+
+	@media #{$xs}{
+		--bs-gutter-x: 10px;
+	}
+
+	& [class*="col-"]{
+		padding-right: calc(var(--bs-gutter-x) * .5);
+		padding-left: calc(var(--bs-gutter-x) * .5);
+		margin-top: var(--bs-gutter-y);
+	}
+}
+
+/* gutter for x axis */
+.tp-gx-40{
+	--bs-gutter-x: 40px;
+
+	@media #{$lg}{
+		--bs-gutter-x: 40px;
+	}
+
+	@media #{$md}{
+		--bs-gutter-x: 30px;
+	}
+
+	@media #{$sm}{
+		--bs-gutter-x: 30px;
+	}
+
+	@media #{$xs}{
+		--bs-gutter-x: 15px;
+	}
+
+	& [class*="col-"]{
+		padding-right: calc(var(--bs-gutter-x) * .5);
+		padding-left: calc(var(--bs-gutter-x) * .5);
+		margin-top: var(--bs-gutter-y);
+	}
+}
+
+.textline {
+	background-repeat: no-repeat;
+	background-size: 0% 1px, 0 1px;
+	background-position: 100% 100%, 0 100%;
+	transition: background-size 0.3s linear;
+	background-image: linear-gradient(#262B35, #262B35), linear-gradient(#262B35, #262B35);
+	&:hover{
+			background-size: 0% 1px, 100% 1px;
+	}
+}
+
+.tp-modal-box{
+	& .modal{
+		--bs-modal-width: 546px;
+	}
+}
+
+.image-anime{
+	position: relative;
+	overflow: hidden;
+	&:after{
+		content: "";
+		position: absolute;
+		width: 200%;
+		height: 0%;
+		left: 50%;
+		top: 50%;
+		background-color: rgba(255,255,255,.3);
+		transform: translate(-50%,-50%) rotate(-45deg);
+		z-index: 1;
+	}
+	&:hover:after{
+    height: 250%;
+    transition: all 600ms linear;
+    background-color: transparent;
+	}
+}
+
+.ajax-response{
+	&.error{
+		color: red;
+	}
+	&.success{
+		color: green;
+	}
+}
+
+
+.white{
+	color: var(--tp-common-white) !important;
+}

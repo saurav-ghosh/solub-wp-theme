@@ -1,0 +1,154 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.6 Counter Css
+/*----------------------------------------*/
+
+.#{$theme-prefix}-counter{
+  &-ptb{
+    @media #{$lg,$md,$xs} {
+      padding-top: 30px;
+      padding-bottom: 50px;
+    }
+  }
+  &-wrap{
+    z-index: 2;
+    position: relative;
+    margin-top: -84px;
+    padding: 41px 58px;
+    border-radius: 80px;
+    background-color: var(--tp-common-white);
+    @media #{$lg,$md,$xs} {
+      margin-top: 0;
+    }
+    @media #{$md,$xs} {
+      flex-wrap: wrap;
+    }
+    @media #{$xs} {
+      padding: 0;
+    }
+    &.home{
+      &-4{
+        margin-top: 0;
+        box-shadow: 0px 0px 40px 0px rgba(15, 16, 36, 0.08);
+        @media #{$xs} {
+          box-shadow: none;
+        }
+      }
+      &-6{
+        & .tp-counter-item-title{
+          color: var(--tp-theme-primary);
+        }
+      }
+    }
+    &.bg-color{
+      background-color: var(--tp-heading-primary);
+    }
+  }
+  &-item{
+    &:not(:last-of-type){
+      @media #{$md,$sm} {
+        margin-bottom: 20px;
+      }
+    }
+    @media #{$md,$sm} {
+      margin-bottom: 0px;
+      margin-right: 20px;
+    }
+    @media #{$xs1} {
+      margin-bottom: 20px;
+    }
+    &-title{
+      font-size: 60px;
+      font-weight: 700;
+      margin-right: 20px;
+      letter-spacing: -2.4px;
+      color: var(--tp-theme-secondary);
+      @media #{$lg,$md} {
+        font-size: 46px;
+      }
+      @media #{$xs} {
+        font-size: 44px;
+      }
+    }
+    &-text{
+      & span{
+        display: inline-block;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1;
+        color: var(--tp-heading-primary);
+        @media #{$lg} {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  &-6{
+    &-ptb{
+      @media #{$md,$xs} {
+        padding-bottom: 80px;
+      }
+    }
+  }
+}
+
+
+.#{$theme-prefix}-cta-6{
+  &-ptb{
+    position: relative;
+    z-index: 1;
+    margin-bottom: -50px;
+  }
+  &-wrapper{
+    border-radius: 10px;
+    padding: 32px 60px;
+    @media #{$lg,$md,$xs} {
+      flex-wrap: wrap;
+    }
+    @media #{$xs1} {
+      padding: 30px;
+    }
+  }
+  &-text{
+    @media #{$md,$xs} {
+      margin-bottom: 20px;
+    }
+  }
+  &-wrap{
+    @media #{$xs1} {
+      flex-wrap: wrap;
+    }
+  }
+  &-title{
+    font-size: 36px;
+    font-weight: 500;
+    font-family: var(--tp-ff-p);
+    letter-spacing: -1.44px;
+    color: var(--tp-common-white);
+  }
+  &-btn{
+    @media #{$xs1} {
+      margin-bottom: 10px;
+    }
+    & .tp-btn.btn-2{
+      &:hover{
+        background-color: var(--tp-theme-secondary);
+      }
+    }
+  }
+  &-call{
+    & a{
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: -0.6px;
+      color: var(--tp-common-white);
+      & svg{
+        margin-right: 5px;
+      }
+      &:hover{
+        color: var(--tp-theme-secondary);
+      }
+    }
+  }
+}

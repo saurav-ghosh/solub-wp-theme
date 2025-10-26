@@ -1,0 +1,124 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  8.3 Step Css
+/*----------------------------------------*/
+
+.#{$theme-prefix}-step{
+  &-item{
+    &:hover{
+      & .tp-step-item{
+        &-thumb{
+          & img{
+            border-color: var(--tp-theme-primary);
+          }
+          & span{
+            color: var(--tp-common-white);
+            background-color: var(--tp-theme-secondary);
+          }
+        }
+      }
+    }
+    &-thumb{
+      & img{
+        border-radius: 50%;
+        border: 15px solid #EBF3ED;
+        @include transition();
+      }
+      & span{
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: inline-block;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: -0.4px;
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        line-height: 60px;
+        border-radius: 50%;
+        @include transition();
+        color: var(--tp-heading-primary);
+        background-color: var(--tp-common-white);
+      }
+    }
+    &-title{
+      margin-bottom: 15px;
+    }
+  }
+  &-heading{
+    @media #{$md,$xs} {
+      margin-bottom: 30px;
+    }
+  }
+  &-shapes{
+    @media #{$lg,$md,$xs} {
+      display: none;
+    }
+  }
+  &-shape{
+    &-1{
+      position: absolute;
+      top: 30%;
+      left: 22%;
+      transform: translateY(-30%);
+    }
+    &-2{
+      position: absolute;
+      top: 30%;
+      left: 48%;
+      transform: translateY(-30%);
+    }
+    &-3{
+      position: absolute;
+      top: 30%;
+      right: 22%;
+      transform: translateY(-30%);
+    }
+  }
+  &-6{
+    &-ptb{
+      @media #{$md,$xs} {
+        padding-top: 80px;
+      }
+    }
+  }
+  &-7{
+    &-ptb{
+      @media #{$lg} {
+        padding-top: 100px;
+        padding-bottom: 80px;
+      }
+      @media #{$md,$xs} {
+        padding-top: 80px;
+        padding-bottom: 60px;
+      }
+    }
+  }
+}
+
+
+.#{$theme-prefix}-cta{
+  &-wrapper{
+    padding: 25px 0;
+    @media #{$md,$xs} {
+      padding: 15px 0;
+    }
+    & img{
+      margin-right: 20px;
+    }
+    & p{
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: -0.36px;
+      color: var(--tp-common-white);
+      & a{
+        font-weight: 600;
+        text-decoration: underline;
+        font-family: var(--tp-ff-heaidng);
+      }
+    }
+  }
+}

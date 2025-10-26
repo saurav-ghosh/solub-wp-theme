@@ -1,0 +1,46 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  3.3 Header Style 3
+/*----------------------------------------*/
+
+
+.#{$theme-prefix}-header{
+    &-3{
+        &-top {
+            padding: 5px 0px;
+            background-color: var(--tp-theme-primary);
+            & .tp-header-2-social{
+                border-left: 1px solid #55AF6A;
+            }
+        }
+        &-main{
+            @media #{$lg,$md,$xs} {
+                padding: 15px 0;
+            }
+        }
+    }
+    &-4{
+        &-main{
+            @media #{$lg,$md,$xs} {
+                padding: 15px 0;
+            }
+        }
+    }
+}
+
+
+.tp-header-pinned {
+    & .tp-header{
+        &-3-main{
+            & .tp-main-menu {
+                & nav{
+                    & > ul {
+                        & > li {
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

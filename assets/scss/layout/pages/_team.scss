@@ -1,0 +1,497 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  8.4 Team Css
+/*----------------------------------------*/
+
+.#{$theme-prefix}-team{
+  &-item{
+    &:hover{
+      & .tp-team-item{
+        &-thumb{
+          & img{
+            transform: scale(1.1,1.1);
+          }
+        }
+        &-btn{
+          opacity: 1;
+          visibility: visible;
+          transform: translateX(0);
+        }
+        &-social{
+          left: 40px;
+          opacity: 1;
+          transition-delay: 0.3s;
+        }
+      }
+    }
+    &-thumb{
+      overflow: hidden;
+      border-radius: 10px;
+      & img{
+        width: 100%;
+        border-radius: 10px;
+        @include transition();
+      }
+    }
+    &-social{
+      position: absolute;
+      top: 40px;
+      left: 20px;
+      opacity: 0;
+      transition-property: all;
+      transition-duration: .3s;
+      & a{
+        display: block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 50%;
+        margin-bottom: 8px;
+        color: var(--tp-heading-primary);
+        background-color: var(--tp-common-white);
+        &:hover{
+          color: var(--tp-common-white);
+          background-color: var(--tp-theme-primary);
+        }
+      }
+    }
+    &-content{
+      & p{
+        font-weight: 500;
+        letter-spacing: -0.32px;
+      }
+    }
+    &-title{
+      margin-bottom: 0;
+      letter-spacing: -0.48px;
+      & a{
+        &:hover{
+          color: var(--tp-theme-primary);
+        }
+      }
+    }
+    &-btn{
+      opacity: 0;
+      visibility: hidden;
+      @include transition();
+      transform: translateX(-20px);
+      & a{
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: var(--tp-theme-primary);
+        font-family: var(--tp-ff-heading);
+        &:hover{
+          color: var(--tp-heading-primary);
+          & span{
+            background-color: var(--tp-theme-secondary);
+          }
+        }
+        & span{
+          display: inline-block;
+          width: 40px;
+          height: 40px;
+          line-height: 38px;
+          text-align: center;
+          border-radius: 50%;
+          margin-left: 4px;
+          @include transition();
+          color: var(--tp-common-white);
+          background-color: var(--tp-theme-primary);
+        }
+      }
+    }
+  }
+
+  &-progress{
+    &-ptb{
+      @media #{$md,$xs} {
+        padding-bottom: 80px;
+      }
+    }
+    &-heading{
+      @media #{$md,$xs} {
+        margin-bottom: 30px;
+      }
+    }
+    &-mail{
+      & a{
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--tp-heading-primary);
+        & i{
+          font-style: normal;
+        }
+        & span{
+          display: inline-block;
+          width: 50px;
+          height: 50px;
+          line-height: 50px;
+          border-radius: 50%;
+          text-align: center;
+          margin-right: 5px;
+          background: rgba(20, 24, 32, 0.06);
+        }
+        &:hover{
+          color: var(--tp-theme-primary);
+        }
+      }
+    }
+    &-wrap{
+      @media #{$md,$xs} {
+        margin-left: 0;
+      }
+    }
+  }
+  &-breadcrumb{
+    &-ptb{
+      @media #{$md,$xs} {
+        padding-top: 80px;
+        padding-bottom: 60px;
+      }
+    }
+  }
+}
+
+
+
+.#{$theme-prefix}-team-3{
+  &-ptb{
+    @media #{$md,$xs} {
+      padding-top: 50px;
+    }
+  }
+  &-item{
+    &:hover{
+      & .tp-team-3{
+        &-content{
+          bottom: -60px;
+          opacity: 1;
+          visibility: visible;
+        }
+        &-thumb{
+          & img{
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+  &-thumb{
+    overflow: hidden;
+    border-radius: 10px;
+    & img{
+      width: 100%;
+      transition: 1.3s;
+      border-radius: 10px;
+    }
+  }
+  &-content{
+    position: absolute;
+    width: 245px;
+    bottom: -40px;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    @include transition();
+    z-index: 1;
+    background: var(--tp-theme-primary);
+    & p{
+      letter-spacing: -0.32px;
+      color: rgba(255, 255, 255, 0.75);
+    }
+  }
+  &-social{
+    margin-bottom: 20px;
+    & a{
+      &:not(:last-of-type){
+        margin-right: 15px;
+      }
+      color: rgba($color: #ffff, $alpha: 0.4);
+      & svg{
+        display: inline-block;
+        transform: translateY(-2px);
+      }
+      &:hover{
+        color: var(--tp-theme-secondary);
+      }
+    }
+  }
+  &-title{
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.48px;
+    color: var(--tp-common-white);
+    & a{
+      &:hover{
+        color: var(--tp-theme-secondary);
+      }
+    }
+  }
+}
+
+
+.#{$theme-prefix}-team-4{
+  &-item{
+    &:hover{
+      & .tp-team-4{
+        &-social{
+          right: 25px;
+        }
+        &-thumb{
+          & img{
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+  &-thumb{
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    & img{
+      width: 100%;
+      transition: 1.3s;
+      border-radius: 10px;
+    }
+  }
+  &-content{
+    padding-top: 22px;
+  }
+  &-social{
+    position: absolute;
+    right: -40px;
+    bottom: 30px;
+    width: 40px;
+    padding: 18px 0;
+    text-align: center;
+    border-radius: 20px;
+    @include transition();
+    background: var(--tp-common-white);
+    box-shadow: 0px 4px 4px 0px rgba(108, 88, 14, 0.16);
+    & a{
+      display: block;
+      color: #A3A5A7;
+      line-height: 1;
+      &:not(:last-of-type){
+        margin-bottom: 12px;
+      }
+      &:hover{
+        color: var(--tp-theme-primary);
+      }
+    }
+  }
+  &-content{
+    & p{
+      font-size: 17px;
+    }
+  }
+  &-title{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    letter-spacing: -0.48px;
+    color: var(--tp-heading-primary);
+    & a{
+      &:hover{
+        color: var(--tp-theme-secondary);
+      }
+    }
+  }
+}
+
+
+.#{$theme-prefix}-team-details{
+  &-ptb{
+    @media #{$xl,$lg} {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+    @media #{$md,$xs} {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+  }
+  &-thumb{
+    @media #{$lg} {
+      height: 100%;
+    }
+      & img{
+          border-radius: 14px;
+          @media #{$lg} {
+            height: 100%;
+          }
+      }
+  }
+  &-subtitle{
+      font-size: 14px;
+      font-weight: 500;
+      display: inline-block;
+      letter-spacing: 0.56px;
+      text-transform: uppercase;
+      color: var(--tp-theme-primary);
+      margin-bottom: 4px;
+  }
+  &-title{
+      font-size: 44px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      letter-spacing: -1.76px;
+      color: var(--tp-common-black);
+      @media #{$xs} {
+          font-size: 40px;
+      }
+  }
+  &-mail{
+    font-size: 22px;
+    font-weight: 500;
+    display: inline-block;
+    color: var(--tp-theme-secondary);
+      &:hover{
+          color: var(--tp-theme-primary);
+      }
+  }
+  &-thumb{
+      @media #{$md,$xs} {
+          padding-right: 0;
+          margin-bottom: 30px;
+      }
+  }
+  &-content{
+      margin-left: 55px;
+      @media #{$lg} {
+        margin-left: 30px;
+      }
+      @media #{$md,$xs} {
+          margin-left: 0;
+      }
+      & p{
+          & br{
+              @media #{$lg,$xs} {
+                  display: none;
+              }
+          }
+      }
+  }
+  &-sm-title{
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.48px;
+      color: var(--tp-common-black);
+  }
+  &-more-info{
+      @media #{$lg,$md,$xs} {
+          margin-bottom: 20px;
+      }
+      & ul{
+          & li{
+              margin-bottom: 15px;
+              list-style: none;
+              & label{
+                  width: 140px;
+                  font-size: 16px;
+                  font-weight: 400;
+                  color: var(--tp-text-body);
+              }
+              & span{
+                font-size: 16px;
+                font-weight: 500;
+                color: var(--tp-heading-primary);
+              }
+          }
+      }
+  }
+  &-text{
+      &-title{
+          font-size: 40px;
+          font-weight: 700;
+          letter-spacing: -1.6px;
+          color: var(--tp-heading-primary);
+          @media #{$xs} {
+              font-size: 35px;
+          }
+      }
+      &-content{
+          & p{
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 26px;
+              margin-bottom: 30px;
+          }
+      }
+      &-list{
+          & ul{
+              & li{
+                  list-style: none;
+                  font-size: 16px;
+                  font-weight: 400;
+                  margin-bottom: 15px;
+                  color:var(--tp-text-body);
+              }
+          }
+      }
+  }
+  &-social{
+      &-icon{
+          & a{
+              position: relative;
+              display: inline-block;
+              height: 36px;
+              width: 36px;
+              line-height: 34px;
+              text-align: center;
+              border-radius: 50%;
+              background: #FEFEFE;
+              border: 1px solid #E6E6E6;
+              margin-right: 5px;
+              z-index: 1;
+              &:hover{
+                color: var(--tp-common-white);
+                border-color: var(--tp-theme-primary);
+                background-color: var(--tp-theme-primary);
+              }
+              & svg{
+                width: 15px;
+                fill: currentColor;
+                transform: translateY(-1px);
+              }
+        }
+      }
+      &-message{
+          margin-left: 5px;
+          & a{
+              position: relative;
+              padding: 5px 15px;
+              display: inline-block;
+              border-radius: 100px;
+              background: #FEFEFE;
+              border: 1px solid #E6E6E6;
+              z-index: 1;
+              & span{
+                  display: inline-block;
+                  margin-right: 8px;
+                  @include transition();
+                  color: var(--tp-text-body);
+                  transform: translateY(-1px);
+              }
+              &:hover{
+                  color: var(--tp-common-white);
+                  border-color: var(--tp-theme-primary);
+                  background-color: var(--tp-theme-primary);
+                  & span{
+                      color: var(--tp-common-white);
+                  }
+              }
+          }
+      }
+  }
+}

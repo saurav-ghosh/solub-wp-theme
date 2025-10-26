@@ -1,0 +1,56 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  5.2 Recent Post css
+/*----------------------------------------*/
+
+.#{$theme-prefix}-recent-post {
+    &-title{
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        letter-spacing: -0.32px;
+        color: var(--tp-heading-primary);
+        & a{
+            &:hover{
+            color: var(--tp-theme-primary);
+            }
+        }
+    }
+    &-item{
+        padding: 12px;
+        border-radius: 10px;
+        background: #EBF3ED;
+        box-shadow: 0px 1px 3px 0px rgba(3, 4, 28, 0.10);
+        &:not(:last-of-type){
+            margin-bottom: 6px;
+        }
+        &:hover{
+            & .#{$theme-prefix}-recent-post{
+                &-thumb{
+                    & img{
+                        transform: scale(1.08);
+                    }
+                }
+            }
+        }
+    }
+    &-thumb{
+        overflow: hidden;
+        flex: 0 0 auto;
+        border-radius: 6px;
+        & img{
+            border-radius: 6px;
+            width: 100%;
+            overflow: hidden;
+            transition: all 0.3s 0s ease-out;
+        }
+    }
+    &-meta{
+        line-height: 1;
+        & span{
+            font-size: 14px;
+            color: var(--tp-text-body);
+        }
+    }
+}

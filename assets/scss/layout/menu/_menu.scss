@@ -1,0 +1,204 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  4.1 Main menu css
+/*----------------------------------------*/
+
+.#{$theme-prefix}-main-menu{
+    & ul{
+        & li{
+        position: relative;
+        list-style: none;
+        display: inline-block;
+        transition: none;
+        margin: 0 15px;
+        @media #{$xl} {
+            margin: 0 10px;
+        }
+        & > a{
+            font-size: 16px;
+            font-weight: 500;
+            display: inline-block;
+            padding: 28px 0;
+            letter-spacing: -0.32px;
+            color: var(--tp-common-white);
+            font-family: var(--tp-ff-heading);
+        }
+        &.has-dropdown{
+            & > a{
+                &::after{
+                    content: "\f107";
+                    font-size: 15px;
+                    font-weight: 400;
+                    margin-left: 6px;
+                    display: inline-block;
+                    @include transition();
+                    color: var(--tp-common-white);
+                    font-family: var(--tp-ff-fontawesome);
+                }
+            }
+            &.p-static{
+                position: static;
+            }
+        }
+        & .sub-menu{
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 220px;
+            z-index: 99;
+            opacity: 0;
+            visibility: hidden;
+            padding: 15px 0 20px;
+            background: var(--tp-common-white);
+            @include transition(.3s, ease-out, all);
+            @include transform-rotateX(-90deg, 0 0);
+            box-shadow: 0px 30px 70px 0px rgba(11, 6, 70, 0.08);
+            & li{
+                width: 100%;
+                margin: 0;
+                line-height: 1;
+                padding: 5px 30px;
+                display: inline-block;
+                transition: all 0.2s cubic-bezier(0.4, 0.28, 0.31, 1.28) 0s;
+                &.has-dropdown{
+                    & > a{
+                        &::after{
+                            position: absolute;
+                            top: 50%;
+                            right: 25px;
+                            @include transform(translateY(-50%) rotate(-90deg));
+                        }
+                    }
+                }
+                & > a{
+                    position: relative;
+                    font-size: 15px;
+                    width: 100%;
+                    z-index: 1;
+                    padding: 0;
+                    color: rgba($color: #000000, $alpha: 0.8);
+                }
+                & > .sub-menu{
+                    left: 120%;
+                    top:0;
+                    visibility: hidden;
+                    opacity: 0;
+                }
+                &:hover{
+                    & > a{
+                        letter-spacing: 0.5px;
+                        color: var(--tp-common-black);
+                    }
+                    & > .sub-menu{
+                        left: 100%;
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        &:hover{
+            & > a{
+                color: var(--tp-theme-secondary);
+                &.hover{
+                    &::after{
+                        transform: rotate(180deg);
+                        color: var(--tp-theme-secondary);
+                    }
+                }
+                &::after{
+                    transform: rotate(180deg);
+                    color: var(--tp-theme-secondary);
+                }
+            }
+            & .sub-menu,
+            & .tp-mega-menu{
+                opacity: 1;
+                visibility: visible;
+                -webkit-transform: rotateX(0);
+                -ms-transform: rotateX(0);
+                transform: rotateX(0);
+            }
+        }
+      }
+   }
+}
+
+
+.tp-mega-menu {
+    position: absolute;
+    top: 100%;
+    opacity: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    width: 1200px;
+    margin: 0 auto;
+    visibility: hidden;
+    padding: 25px 25px 5px;
+    border-radius: 0 0 10px 10px;
+    background-color: var(--tp-common-white);
+    @include transition(.3s, ease-out, all);
+    @include transform-rotateX(-90deg, 0 0);
+    box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
+    @media #{$lg,$md,$xs}{
+        width: auto;
+        opacity: 1;
+        visibility: visible;
+        transition: none;
+        position: static;
+        display: none;
+        -webkit-transform: rotateX(0);
+        -ms-transform: rotateX(0);
+        transform: rotateX(0);
+    }
+    @media #{$xl} {
+       width: 1100px;
+    }
+    & .tp-home{
+        &-menu{
+            position: relative;
+            & a{
+                &:hover{
+                 & .tp-home-title{
+                    color: var(--tp-theme-secondary);
+                 }   
+                }
+            }
+        }
+        &-content{
+            margin-bottom: 30px;
+        }
+        &-thumb{
+            position: relative;
+            margin-bottom: 15px;
+            height: 165px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid rgba(185, 182, 182, 0.44);
+            box-shadow: rgba(149, 157, 165, 0.28) 0px 1px 2px;
+            & img{
+                width: 100%;
+                object-fit: cover;
+                transform: scale(1) translateZ(0);
+                transition: transform 0.6s cubic-bezier(0.5, 1, 0.89, 1);
+            }
+            &:hover{
+                & img{
+                    transform: scale(1.1) translateZ(0);
+                }
+            }
+        }
+        &-title{
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 0;
+            text-align: center;
+            @include transition();
+            @media #{$lg,$md,$xs} {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

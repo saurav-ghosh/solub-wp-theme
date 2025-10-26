@@ -1,0 +1,129 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  6.3 Footer Style 3
+/*----------------------------------------*/
+
+//footer widget style
+.#{$theme-prefix}-footer-6{
+  &-copyright-wrap{
+    & .tp-footer-copyright {
+      & p{
+        color: var(--tp-text-body);
+        & span{
+          color: var(--tp-theme-primary);
+        }
+      }
+    }
+    & .tp-footer-widget-social {
+      & a{
+        color: var(--tp-theme-primary);
+        background-color: var(--tp-common-white);
+        &:hover{
+          color: var(--tp-common-white);
+          background-color: var(--tp-theme-primary);
+        }
+      }
+    }
+  }
+}
+
+
+/* footer col design for home 1 */
+.tp-footer-6-col{
+    &-1{
+      padding-right: 52px;
+      @media #{$lg,$md,$xs} {
+        padding-right: 0;
+      }
+      & .tp-footer-widget-content {
+        & p{
+          color: var(--tp-text-body);
+        }
+        &-input{
+          & input{
+            box-shadow: none;
+            color: var(--tp-text-body);
+            background-color: transparent;
+            border: 1px solid rgba(31, 34, 32, 0.15);
+            &::placeholder{
+              color: var(--tp-text-body);
+            }
+            &:focus{
+              border-color: var(--tp-theme-primary);
+            }
+          }
+        }
+      }
+    }
+    &-2{
+      @media #{$lg} {
+        padding-left: 20px;
+      }
+      & .tp-footer-widget{
+        &-title{
+        color: var(--tp-heading-primary);
+      }
+      &-content{
+        & ul{
+          & li{
+            & a{
+              color: var(--tp-text-body);
+              &:hover{
+                color: var(--tp-theme-primary);
+              }
+            }
+          }
+        }
+      }
+      }
+    }
+    &-3{
+      padding-left: 80px;
+      @media #{$xl} {
+        padding-left: 55px;
+      }
+      @media #{$lg,$md,$xs} {
+          padding-left: 0;
+      }
+      & .tp-footer-widget{
+        &-title{
+        color: var(--tp-heading-primary);
+      }
+      &-content{
+        & ul{
+          & li{
+            & a{
+              color: var(--tp-text-body);
+              &:hover{
+                color: var(--tp-theme-primary);
+              }
+            }
+          }
+        }
+      }
+      }
+    }
+    &-4{
+      @media #{$lg} {
+        margin-left: -20px;
+      }
+      & .tp-footer-widget{
+        &-title{
+        color: var(--tp-heading-primary);
+        }
+        &-content{
+          & a{
+            color: var(--tp-text-body);
+            &:hover{
+              color: var(--tp-theme-primary);
+            }
+            & svg{
+              color: var(--tp-theme-primary);
+            }
+          }
+        }
+      }
+    }
+}
+

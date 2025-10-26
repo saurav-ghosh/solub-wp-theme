@@ -1,0 +1,55 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.8 Fun fact Css
+/*----------------------------------------*/
+
+.#{$theme-prefix}-fun-fact{
+   &-ptb{
+      @media #{$xs} {
+         padding-top: 80px;
+         padding-bottom: 80px;
+      }
+   }
+   &-item{
+      padding-top: 25px;
+      border-top: 1px solid rgba(31, 34, 32, 0.15);
+      &-sub{
+         display: inline-block;
+         position: relative;
+         font-size: 18px;
+         font-weight: 600;
+         margin-left: 20px;
+         margin-bottom: 25px;
+         letter-spacing: -0.36px;
+         color: var(--tp-heading-primary);
+         font-family: var(--tp-ff-heading);
+         &::after{
+            position: absolute;
+            content: '';
+            left: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--tp-heading-primary);
+         }
+      }
+      &-title{
+         font-size: 60px;
+         font-weight: 700;
+         margin-bottom: 10px;
+         letter-spacing: -2.4px;
+         color: var(--tp-theme-primary);
+      }
+      & p{
+         & br{
+            @media #{$lg,$md,$xs} {
+               display: none;
+            }
+         }
+      }
+   }
+}
+

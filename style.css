@@ -1,0 +1,456 @@
+/*
+Theme Name: Solub
+Description: Solub is a clean and minimal theme for WordPress. It is a responsive theme that looks great on any device. It supports all post formats, has widget areas in the sidebar and footer, and has a custom menu. The theme is also translation ready.
+Author: Saurav Ghosh 
+Author URI: https://www.sauravghoshweb.com
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: blog, two-columns, right-sidebar, custom-menu, editor-style, featured-images, full-width-template, post-formats, sticky-post, theme-options, translation-ready
+Text Domain: solub
+*/
+
+.tp-footer-col-1 {
+  margin-bottom: 10px;
+}
+
+.tp-footer-widget-contact span i {
+  color: rgb(255, 112, 41);
+  font-size: 18px;
+}
+
+.tp-postbox-meta span img {
+  height: auto;
+  border-radius: 50%;
+}
+
+.tp-recent-post-thumb img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+}
+
+.tagcloud a {
+  font-size: 14px !important;
+}
+
+.postbox-comment ul li .children {
+  margin-left: 80px;
+}
+
+.postbox-comment ul li .children li {
+  margin-top: 40px;
+}
+
+.logged-in-as {
+  font-size: 14px !important;
+  margin-bottom: 30px;
+}
+
+.logged-in-as a {
+  color: var(--tp-theme-primary);
+  text-decoration: underline;
+}
+
+.comment-reply-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1;
+  margin-bottom: 10px;
+  letter-spacing: -1.08px;
+  color: var(--tp-heading-primary);
+}
+
+.comment-notes {
+  margin-bottom: 30px;
+  font-size: 14px !important;
+}
+
+.comment-form-cookies-consent {
+  margin-bottom: 30px;
+}
+
+.tp-blog-item-tags a {
+  padding: 1px 10px !important;
+  margin-right: 8px !important;
+}
+
+.tp-product-price-wrapper del {
+  font-weight: 400;
+  font-size: 14px;
+  text-decoration-line: line-through;
+  color: var(--tp-text-body);
+}
+
+.tp-product-price-wrapper ins {
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--tp-common-black);
+  text-decoration: none;
+}
+
+.added_to_cart {
+  font-size: 18px;
+  color: var(--tp-common-white);
+  background-color: var(--tp-common-black);
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: 700;
+  display: inline-block;
+  width: 100%;
+  padding: 8px 30px;
+}
+
+.added_to_cart:hover {
+  color: var(--tp-common-white);
+  background-color: var(--tp-theme-primary);
+}
+
+.tp-product-add-cart-btn-large.added {
+  display: none;
+}
+
+.woosw-btn-has-icon .woosw-btn-icon {
+  color: var(--tp-theme-primary);
+}
+
+.see-more-btn {
+  font-weight: 500;
+  color: var(--tp-theme-primary);
+  cursor: pointer;
+}
+
+.comment-notes {
+  font-size: 16px !important;
+  margin-bottom: 8px !important;
+}
+
+/* cart page style */
+.woocommerce .cart-collaterals .cart_totals,
+.woocommerce-page .cart-collaterals .cart_totals {
+  width: 100%;
+}
+
+.woocommerce table.shop_table {
+  border: none !important;
+}
+
+.woocommerce table.shop_table td {
+  padding: 20px 0px !important;
+}
+
+.tp-product-details-quantity .tp-product-quantity {
+  margin-bottom: 0 !important;
+}
+
+.tp-cart-update button {
+  font-weight: 500 !important;
+  font-size: 16px !important;
+  color: var(--tp-common-black) !important;
+  background-color: var(--tp-common-white) !important;
+  padding: 12px 25px !important;
+  border: 1px solid rgba(1, 15, 28, 0.1) !important;
+}
+
+.tp-cart-update button:hover {
+  background-color: var(--tp-theme-primary) !important;
+  border-color: var(--tp-theme-primary) !important;
+  color: var(--tp-common-white) !important;
+}
+
+.tp-cart-coupon-input input {
+  width: 100% !important;
+}
+.tp-cart-coupon {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.woocommerce ul#shipping_method li {
+  align-items: center;
+  display: flex;
+}
+
+.woocommerce-shipping-destination {
+  color: var(--tp-heading-primary);
+}
+
+.woocommerce-shipping-calculator a {
+  color: var(--tp-heading-primary);
+}
+
+.woocommerce-shipping-calculator a:hover {
+  color: var(--tp-theme-primary);
+}
+
+body.woocommerce-checkout .tp-page-area {
+  background-color: #f5f5f5; /* only the main content area */
+}
+
+body.woocommerce-checkout .woocommerce form .form-row label {
+  font-weight: 500;
+  color: var(--tp-common-black);
+  font-size: 14px;
+}
+
+body.woocommerce-checkout .woocommerce form .form-row .input-text {
+  width: 100%;
+  color: var(--tp-common-black);
+  height: 50px;
+  padding: 0 26px;
+  text-transform: capitalize;
+  line-height: 56px;
+  font-size: 14px;
+  background: #ffffff;
+  border: 1px solid #d5d8db;
+  border-radius: 0px !important;
+}
+
+/* Main select2 box */
+body.woocommerce-checkout .select2-container .select2-selection {
+  height: 58px;
+  border: 1px solid #d5d5db;
+  border-radius: 0;
+  padding: 0 20px;
+  display: flex;
+  align-items: center; /* vertical alignment */
+}
+
+/* Text inside */
+body.woocommerce-checkout .select2-container .select2-selection__rendered {
+  color: var(--tp-common-black);
+  line-height: 1.4;
+}
+
+/* Arrow icon */
+body.woocommerce-checkout .select2-container .select2-selection__arrow {
+  height: 100%;
+}
+
+body.woocommerce-checkout .woocommerce-shipping-fields {
+  margin: 20px 0;
+}
+
+body.woocommerce-checkout .woocommerce-shipping-fields label {
+  font-size: 15px;
+  color: #55585b;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  margin-left: 3px;
+}
+
+/* Style WooCommerce checkout checkboxes */
+body.woocommerce-checkout input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #c3c7c9;
+  border-radius: 2px;
+  appearance: none; /* Remove browser default */
+  -webkit-appearance: none;
+  background-color: #fff;
+  cursor: pointer;
+  vertical-align: middle;
+  margin-right: 8px; /* space between checkbox and label text */
+}
+
+/* Checked state */
+body.woocommerce-checkout input[type="checkbox"]:checked {
+  background-color: var(--tp-theme-primary); /* fill color when checked */
+  border-color: var(--tp-theme-primary);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px 12px;
+}
+
+.tp-cart-checkout-shipping-title {
+  display: none !important;
+}
+
+.tp-cart-checkout-shipping-option {
+  border: none !important;
+
+  padding: 0 !important;
+}
+
+body.woocommerce-checkout .tp-cart-checkout-shipping {
+  padding-bottom: 0 !important;
+  border-bottom: none !important;
+  margin-bottom: 0 !important;
+}
+
+.tp-checkout-btn {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--tp-common-white);
+  background-color: var(--tp-theme-primary);
+  height: 50px;
+  line-height: 50px;
+  padding: 0 30px;
+  text-align: center;
+}
+
+#add_payment_method #payment,
+.woocommerce-cart #payment,
+.woocommerce-checkout #payment {
+  background: var(--tp-common-white) !important;
+  border-radius: 0px !important;
+}
+
+.tp-checkout-payment-desc::after {
+  display: none !important;
+}
+
+.tp-checkout-payment-desc p {
+  margin-left: 0 !important;
+}
+
+#add_payment_method #payment div.form-row,
+.woocommerce-cart #payment div.form-row,
+.woocommerce-checkout #payment div.form-row {
+  padding: 0 !important;
+}
+
+.woocommerce-terms-and-conditions-wrapper {
+  margin-bottom: 20px;
+}
+
+.woocommerce-privacy-policy-text {
+  display: none !important;
+}
+
+.tp-cart-checkout-btn {
+  font-size: 16px !important;
+  padding: 10px 30px !important;
+}
+
+#add_payment_method .wc-proceed-to-checkout,
+.woocommerce-cart .wc-proceed-to-checkout,
+.woocommerce-checkout .wc-proceed-to-checkout {
+  padding: 0 !important;
+}
+
+#add_payment_method .wc-proceed-to-checkout a.checkout-button,
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button,
+.woocommerce-checkout .wc-proceed-to-checkout a.checkout-button {
+  margin-bottom: 0 !important;
+}
+
+body.woocommerce-checkout .woocommerce-form-coupon-toggle a,
+body.woocommerce-checkout .woocommerce-form-login-toggle a {
+  color: var(--tp-theme-primary);
+  position: relative;
+}
+
+body.woocommerce-checkout .woocommerce-form-coupon-toggle a::after,
+body.woocommerce-checkout .woocommerce-form-login-toggle a::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 1px;
+  background-color: var(--tp-theme-primary);
+}
+
+body.woocommerce-checkout .woocommerce-info {
+  padding: 0 !important;
+  margin: 0 !important;
+  border-top: none !important;
+  color: var(--tp-common-black);
+}
+
+body.woocommerce-checkout .woocommerce-info::before {
+  display: none !important;
+}
+
+body.woocommerce-checkout .woocommerce form.checkout_coupon,
+.woocommerce form.login,
+.woocommerce form.register {
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+body.woocommerce-checkout .woocommerce form .form-row-last,
+.woocommerce-page form .form-row-last {
+  float: none !important;
+}
+
+body.woocommerce-checkout .tp-checkout-verify-item {
+  margin-bottom: 10px !important;
+}
+
+body.woocommerce-checkout .tp-checkout-bill-area {
+  margin-top: 30px;
+}
+
+body.woocommerce-checkout .tp-checkout-place {
+  margin-top: 30px;
+}
+
+body.woocommerce-checkout .form-row-first {
+  float: right;
+}
+
+/* My Account Navigation Styling */
+.woocommerce-MyAccount-navigation {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+}
+
+.woocommerce-MyAccount-navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.woocommerce-MyAccount-navigation li {
+  margin-bottom: 8px;
+}
+
+.woocommerce-MyAccount-navigation li:last-child {
+  margin-bottom: 0;
+}
+
+.woocommerce-MyAccount-navigation a {
+  display: block;
+  padding: 12px 15px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  color: #333;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.woocommerce-MyAccount-navigation a:hover {
+  background: #4cafef;
+  color: #fff;
+}
+
+.woocommerce-MyAccount-navigation .is-active a,
+.woocommerce-MyAccount-navigation a[aria-current="page"] {
+  background: #4cafef;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 3px 8px rgba(76, 175, 239, 0.3);
+}
+
+.woocommerce-account .woocommerce-MyAccount-navigation {
+  width: 100% !important;
+}
+
+.woocommerce-account .woocommerce-MyAccount-content {
+  float: none;
+  width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+}
