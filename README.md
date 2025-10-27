@@ -1,4 +1,4 @@
-# Insurez — Custom WordPress Theme
+# Solub — Custom WordPress Theme
 
 A modern, minimal, and fully responsive WordPress theme built for a Solar Energy company.
 
@@ -19,7 +19,7 @@ A modern, minimal, and fully responsive WordPress theme built for a Solar Energy
 - Gutenberg & Elementor compatibility
 
 ## 📷 Preview
-![Screenshot](theme/screenshot.png)
+[http://solub.sauravghoshweb.com/]
 
 ## 📄 License
 MIT License
